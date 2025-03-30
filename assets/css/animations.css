@@ -1,0 +1,413 @@
+/**
+ * CuidadoresVIP - Animaciones
+ * Archivo cargado de forma diferida para optimizar velocidad de carga inicial
+ */
+
+/* Animaciones para la sección Hero */
+@keyframes pawFloat {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.2;
+    }
+    25% {
+        transform: translateY(-20px) rotate(10deg);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateY(-35px) rotate(-5deg);
+        opacity: 0.4;
+    }
+    75% {
+        transform: translateY(-20px) rotate(10deg);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.2;
+    }
+}
+
+.floating-paw {
+    position: absolute;
+    color: var(--primary-color);
+    opacity: 0.2;
+    animation: pawFloat 15s ease-in-out infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Animación del título principal */
+@keyframes titleFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-title {
+    animation: titleFadeIn 1.2s ease-out forwards;
+}
+
+/* Animación para la palabra destacada */
+@keyframes highlightPulse {
+    0% {
+        background-size: 0% 20%;
+    }
+    100% {
+        background-size: 100% 20%;
+    }
+}
+
+.highlight {
+    position: relative;
+    color: var(--secondary-color);
+    font-weight: 700;
+    background: linear-gradient(to right, rgba(255, 152, 0, 0.3), rgba(255, 152, 0, 0.3));
+    background-repeat: no-repeat;
+    background-position: 0 88%;
+    background-size: 100% 20%;
+    animation: highlightPulse 1.5s ease-out forwards;
+    animation-delay: 0.5s;
+    background-size: 0% 20%;
+}
+
+/* Animación de patrón de huellas */
+.paw-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+/* Animación de fondo con degradado dinámico */
+.hero-background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(255, 152, 0, 0.15));
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.hero-background-animation.loaded {
+    opacity: 1;
+}
+
+/* Animaciones para las huellas flotantes en la sección de contacto */
+.floating-paws {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Animación para el WhatsApp pulsante */
+@keyframes pulseButton {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+.pulse-animation {
+    animation: pulseButton 2s infinite;
+}
+
+/* Animación del banner de cookies */
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    background: white;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.cookie-banner.active {
+    transform: translateY(0);
+    opacity: 1;
+    animation: slideUp 0.5s forwards;
+}
+
+/* Animación para destacados en planes */
+@keyframes recommendedPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 152, 0, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 152, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 152, 0, 0);
+    }
+}
+
+.service-option.recommended {
+    animation: recommendedPulse 2s infinite;
+}
+
+/* Animación de texto destacado en contacto */
+@keyframes highlightTextGlow {
+    0% {
+        text-shadow: 0 0 0 rgba(255, 152, 0, 0);
+    }
+    50% {
+        text-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 0 rgba(255, 152, 0, 0);
+    }
+}
+
+.highlight-text {
+    position: relative;
+    color: var(--secondary-color);
+    font-weight: 700;
+    animation: highlightTextGlow 2s infinite;
+}
+
+/* Animación para el mensaje de urgencia */
+@keyframes urgencyFlash {
+    0%, 100% {
+        background-color: rgba(255, 87, 34, 0.05);
+    }
+    50% {
+        background-color: rgba(255, 87, 34, 0.1);
+    }
+}
+
+.urgency-message {
+    padding: 10px 15px;
+    margin: 15px 0;
+    border-radius: var(--border-radius-md);
+    background-color: rgba(255, 87, 34, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: urgencyFlash 2s infinite;
+}
+
+.urgency-message i {
+    color: var(--secondary-color);
+}
+
+.urgency-message p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Decoración de imagen en la sección Nosotros */
+.about-img-decor {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 15px;
+    left: 15px;
+    border: 2px solid var(--primary-color);
+    z-index: -1;
+    border-radius: var(--border-radius-md);
+    transition: all 0.3s ease;
+}
+
+.about-img:hover .about-img-decor {
+    top: 8px;
+    left: 8px;
+}
+
+/* Animación para las insignias de confianza */
+.trust-badges {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.trust-badges .badge {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--primary-color);
+    padding: 5px 10px;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.trust-badges .badge i {
+    color: var(--primary-color);
+}
+
+/* Animación para títulos de galería al pasar el mouse */
+.gallery-title {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-title {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animación para la sección de testimonios */
+@keyframes testimonialFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.testimonial-quote {
+    animation: testimonialFadeIn 0.8s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+.testimonial-stars {
+    color: #FFD700;
+    margin-bottom: 5px;
+}
+
+/* Efecto shake para validación de formulario */
+@keyframes shakeEffect {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+.shake {
+    animation: shakeEffect 0.5s ease-in-out;
+}
+
+/* Transiciones para detalles de servicios */
+.service-detail-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+    position: absolute;
+}
+
+.service-detail-content.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    position: relative;
+}
+
+/* Animación para elementos al hacer scroll */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media queries para animaciones responsivas */
+@media (max-width: 768px) {
+    .hero-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .floating-paw {
+        display: none;
+    }
+    
+    .about-img-decor {
+        display: none;
+    }
+}
+
+/* Optimización para dispositivos de alta gama */
+@media (prefers-reduced-motion: no-preference) {
+    .hero-content {
+        transition: transform 0.5s ease;
+    }
+    
+    .hero-content:hover {
+        transform: translateY(-5px);
+    }
+}
+
+/* Optimización para dispositivos de baja potencia */
+@media (prefers-reduced-motion: reduce) {
+    .floating-paw,
+    .pulse-animation,
+    .service-option.recommended,
+    .highlight-text,
+    .urgency-message {
+        animation: none !important;
+    }
+    
+    .animate-on-scroll {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+} 
