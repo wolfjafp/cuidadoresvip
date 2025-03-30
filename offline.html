@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sin conexión | CuidadoresVIP</title>
+    <meta name="description" content="Parece que no tienes conexión a internet. CuidadoresVIP ofrece servicios profesionales de cuidado de mascotas en Santiago, Chile.">
+    <link rel="icon" href="/favicon.ico">
+    <style>
+        :root {
+            --primary: #4CAF50;
+            --primary-dark: #388E3C;
+            --secondary: #FF9800;
+            --text: #333333;
+            --bg: #f9f9f9;
+            --light: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .offline-container {
+            max-width: 600px;
+            margin: 0 auto;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 30px;
+            background-color: var(--light);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .logo {
+            max-width: 180px;
+            margin: 0 auto 20px;
+        }
+        
+        h1 {
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+        
+        p {
+            margin-bottom: 25px;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .paw-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            opacity: 0.7;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .button {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+        
+        .button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .secondary-button {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            margin-left: 10px;
+        }
+        
+        .secondary-button:hover {
+            background-color: rgba(76, 175, 80, 0.1);
+        }
+        
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #777;
+        }
+        
+        @media (max-width: 480px) {
+            .offline-container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .button-group {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .button {
+                margin: 8px 0;
+                width: 80%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-container">
+        <svg class="paw-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.5,2C9.3,2,10,2.7,10,3.5C10,4.3,9.3,5,8.5,5C7.7,5,7,4.3,7,3.5C7,2.7,7.7,2,8.5,2 M14.5,2C15.3,2,16,2.7,16,3.5C16,4.3,15.3,5,14.5,5C13.7,5,13,4.3,13,3.5C13,2.7,13.7,2,14.5,2 M5.5,8C6.3,8,7,8.7,7,9.5C7,10.3,6.3,11,5.5,11C4.7,11,4,10.3,4,9.5C4,8.7,4.7,8,5.5,8 M17.5,8C18.3,8,19,8.7,19,9.5C19,10.3,18.3,11,17.5,11C16.7,11,16,10.3,16,9.5C16,8.7,16.7,8,17.5,8 M11.5,17C13.1,17,14.6,16.2,15.5,14.8C16.5,13.3,20,13,20,9.5C20,8.3,19.4,7.3,18.4,6.6C17.6,5.9,16.5,5.5,15.5,5.5C14.2,5.5,13.9,6.1,12,6.1C10.6,6.1,9.9,5.6,8.5,5.5C7.5,5.5,6.4,5.9,5.6,6.6C4.6,7.3,4,8.3,4,9.5C4,13,7.5,13.3,8.5,14.8C9.4,16.2,10.1,17,11.5,17Z" fill="#4CAF50" />
+        </svg>
+        
+        <h1>Estás sin conexión</h1>
+        
+        <p>Parece que no tienes conexión a internet en este momento. CuidadoresVIP requiere una conexión para mostrar nuestros servicios de cuidado profesional de mascotas.</p>
+        
+        <div class="button-group">
+            <button class="button" onclick="window.location.reload()">Intentar de nuevo</button>
+            <a href="/" class="button secondary-button">Ir al inicio</a>
+        </div>
+        
+        <div class="footer">
+            <p>CuidadoresVIP - Servicio Profesional de Cuidado de Mascotas</p>
+        </div>
+    </div>
+
+    <script>
+        // Verificar conexión periódicamente
+        setInterval(() => {
+            if (navigator.onLine) {
+                window.location.reload();
+            }
+        }, 5000);
+        
+        // Detectar cuando la conexión vuelva
+        window.addEventListener('online', () => {
+            window.location.reload();
+        });
+    </script>
+</body>
+</html> 

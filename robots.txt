@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+Disallow: /assets/css/
+Disallow: /assets/js/
+Disallow: /assets/fonts/
+Allow: /assets/images/
+
+# Permitir a todos los robots acceder a las páginas legales
+Allow: /politica-privacidad.html
+Allow: /politica-cookies.html
+Allow: /terminos-condiciones.html
+
+# Optimización de rastreo
+Crawl-delay: 10
+
+# Reglas específicas para bots conocidos
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 5
+
+User-agent: Googlebot-Image
+Allow: /assets/images/
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 10
+
+# Indicar la ubicación del sitemap
+Sitemap: https://www.cuidadoresvip.cl/sitemap.xml
