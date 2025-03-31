@@ -74,6 +74,24 @@
   --form-placeholder: #9E9E9E;
 }
 
+/* Mejoras de rendimiento y accesibilidad */
+:root {
+    /* Colores optimizados para contraste y accesibilidad */
+    --text-dark: #1a1a1a;
+    --text-light: #ffffff;
+    --text-muted: #666666;
+    --primary-color: #4CAF50;
+    --secondary-color: #FF9800;
+    --accent-color: #8BC34A;
+    
+    /* Optimizaciones de rendimiento */
+    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Mejoras para lectores de pantalla */
+    --sr-only-color: rgba(0, 0, 0, 0);
+}
+
 /* Reset y estilos base */
 * {
   margin: 0;
@@ -84,6 +102,8 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -108,6 +128,7 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  will-change: transform;
 }
 
 /* Contenedor principal */
@@ -345,7 +366,7 @@ p {
   width: 0;
   height: 2px;
   background-color: var(--primary-color);
-  transition: var(--transition-normal);
+  transition: width 0.3s ease;
 }
 
 .nav-links a:hover::after {
