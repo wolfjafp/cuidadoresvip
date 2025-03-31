@@ -505,4 +505,44 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Ejecutar handleScroll una vez para establecer el estado inicial
     handleScroll();
+    
+    // Mejoras de rendimiento y seguridad
+    // CSP (Content Security Policy)
+    const cspMeta = document.createElement('meta');
+    cspMeta.httpEquiv = 'Content-Security-Policy';
+    cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com;";
+    document.head.appendChild(cspMeta);
+    
+    // Lazy loading de imágenes
+    const images = document.querySelectorAll('img[data-src]');
+    images.forEach(img => {
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                    io.unobserve(img);
+                }
+            });
+        }, { threshold: 0.1 });
+        io.observe(img);
+    });
+    
+    // Optimización de recursos
+    const criticalCSS = document.createElement('style');
+    criticalCSS.textContent = `
+        .hero-section {
+            background-color: var(--bg-light);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            text-align: center;
+        }
+    `;
+    document.head.appendChild(criticalCSS);
 });
