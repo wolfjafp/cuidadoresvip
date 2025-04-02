@@ -3,1173 +3,378 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuidadores ViP de Santiago de Chile</title>
-    <meta name="description" content="Servicio profesional 24/7 de cuidado de mascotas a domicilio en Santiago. Cuidamos a tus perros y gatos con expertos certificados mientras disfrutas o trabajas. Paseos, alimentación y atención médica personalizada.">
-    <meta name="keywords" content="cuidado de mascotas, paseador de perros, cuidador de gatos, Santiago de Chile, servicio a domicilio, paseo de perros, atención veterinaria, alimentación de mascotas">
-    <meta name="author" content="CuidadoresVIP">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    
-    <!-- Precargas críticas para mejorar rendimiento -->
-    <link rel="preload" href="./assets/css/main.css" as="style">
-    <link rel="preload" href="./assets/js/main.js" as="script">
-    <link rel="preload" href="./assets/images/logo-cleaning.png" as="image" fetchpriority="high">
-    <link rel="preload" href="./assets/images/paw-pattern-new.svg" as="image" type="image/svg+xml">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- DNS Prefetch & Preconexiones -->
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-    <link rel="dns-prefetch" href="https://www.google.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+
+    <!-- SEO y Metadatos para CUIDADORESVIP.CL -->
+    <title>Cuidadores VIP | Cuidado de Mascotas a Domicilio en Santiago</title>
+    <meta name="description" content="Deja a tu regalón en las mejores manos. Cuidadores VIP ofrece cuidado profesional y cariñoso para perros y gatos a domicilio en Santiago de Chile. ¡Contáctanos!">
+    <meta name="keywords" content="cuidado de mascotas domicilio santiago, cuidadores de perros santiago, cuidador de gatos santiago, pet sitting santiago, paseador de perros santiago, cuidadores vip chile, cuidado mascotas vacaciones">
+    <meta name="author" content="CUIDADORESVIP.CL">
+    <link rel="canonical" href="https://cuidadoresvip.cl/" /> <!-- Asumiendo este dominio -->
+
+    <!-- Open Graph (para Redes Sociales) -->
+    <meta property="og:title" content="Cuidadores VIP | Cuidado Confiable a Domicilio para tu Mascota en Santiago" />
+    <meta property="og:description" content="¿Necesitas quién cuide a tu perro o gato en casa? Ofrecemos visitas y cuidado personalizado con profesionales verificados. ¡Tu tranquilidad es nuestra prioridad!" />
+    <meta property="og:url" content="https://cuidadoresvip.cl/" />
+    <meta property="og:image" content="https://cuidadoresvip.cl/images/og-image-cuidadoresvip.jpg" /> <!-- Crear esta imagen -->
+    <meta property="og:image:alt" content="Cuidador sonriente jugando con un perro feliz en un hogar" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CL" />
+    <meta property="og:site_name" content="Cuidadores VIP" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cuidadores VIP | Cuidado Confiable a Domicilio para tu Mascota en Santiago" />
+    <meta name="twitter:description" content="¿Necesitas quién cuide a tu perro o gato en casa? Ofrecemos visitas y cuidado personalizado con profesionales verificados." />
+    <meta name="twitter:image" content="https://cuidadoresvip.cl/images/twitter-image-cuidadoresvip.jpg" /> <!-- Crear esta imagen -->
+    <meta name="twitter:image:alt" content="Gato relajado recibiendo cariño de un cuidador" />
+
+    <!-- Favicons (Asegúrate de crear estos archivos en /images/favicons/ o ajustar rutas) -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/images/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest"> <!-- Crear y ajustar -->
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://www.google.com" crossorigin>
-    
-    <!-- Metadatos específicos para Chile -->
-    <meta name="geo.region" content="CL-RM">
-    <meta name="geo.placename" content="Santiago">
-    <meta name="geo.position" content="-33.4489;-70.6693">
-    <meta name="ICBM" content="-33.4489, -70.6693">
-    
-    <!-- Etiquetas canónicas y de idioma alternativo -->
-    <link rel="canonical" href="https://www.cuidadoresvip.cl">
-    <link rel="alternate" hreflang="es-CL" href="https://www.cuidadoresvip.cl">
-    
-    <!-- Metadatos Open Graph para redes sociales -->
-    <meta property="og:title" content="CuidadoresVIP - Cuidado Profesional de Mascotas 24/7 en Santiago">
-    <meta property="og:description" content="Servicio profesional de cuidado de mascotas en Santiago de Chile. Cuidamos a tus perros y gatos con expertos certificados mientras disfrutas o trabajas.">
-    <meta property="og:image" content="https://www.cuidadoresvip.cl/assets/images/og-image-pets.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Cuidador profesional con perro feliz">
-    <meta property="og:url" content="https://www.cuidadoresvip.cl">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="es_CL">
-    <meta property="og:site_name" content="CuidadoresVIP">
-    
-    <!-- Twitter Card data -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CuidadoresVIP - Cuidado Profesional de Mascotas">
-    <meta name="twitter:description" content="Servicio profesional de cuidado de mascotas en Santiago. Cuidamos a tus perros y gatos con amor mientras no estás en casa.">
-    <meta name="twitter:image" content="https://www.cuidadoresvip.cl/assets/images/twitter-card-pets.jpg">
-    
-    <!-- Metadatos para móviles -->
-    <meta name="theme-color" content="#4CAF50">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-title" content="CuidadoresVIP">
-    <meta name="application-name" content="CuidadoresVIP">
-    
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="/site.webmanifest">
-    
-    <!-- Datos estructurados para SEO - Negocio Local con atributos para servicios de mascotas -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Schema.org para Negocio Local / Servicio Profesional -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "@id": "https://www.cuidadoresvip.cl",
-      "name": "CuidadoresVIP",
-      "image": "https://www.cuidadoresvip.cl/assets/images/logo-cleaning.png",
-      "logo": "https://www.cuidadoresvip.cl/assets/images/logo-cleaning.png",
-      "url": "https://www.cuidadoresvip.cl",
-      "telephone": "+51918647921",
-      "priceRange": "$$$",
-      "description": "Servicio profesional de cuidado de mascotas a domicilio en Santiago. Ofrecemos paseos, alimentación y atención personalizada para perros y gatos.",
-      "slogan": "Cuidamos a tus mascotas como si fueran nuestras",
+      "@type": "ProfessionalService",
+      "name": "Cuidadores VIP",
+      "description": "Servicio profesional de cuidado de mascotas (perros y gatos) a domicilio en Santiago de Chile. Cuidadores verificados y con experiencia.",
+      "url": "https://cuidadoresvip.cl",
+      // "logo": "https://cuidadoresvip.cl/images/logo.webp",
+      "telephone": "+56978937482",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Santiago",
         "addressLocality": "Santiago",
-        "addressRegion": "Región Metropolitana",
-        "postalCode": "8320000",
+        "addressRegion": "RM",
         "addressCountry": "CL"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -33.4489,
-        "longitude": -70.6693
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-          "opens": "00:00",
-          "closes": "23:59"
-        }
-      ],
-      "sameAs": [
-        "https://www.facebook.com/cuidadoresvip",
-        "https://www.instagram.com/cuidadoresvip"
-      ],
       "areaServed": {
         "@type": "City",
         "name": "Santiago"
       },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Servicios de Cuidado de Mascotas",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "name": "Plan Básico",
-            "description": "1 hora de atención personalizada para tu mascota",
-            "price": "15000",
-            "priceCurrency": "CLP"
-          },
-          {
-            "@type": "Offer",
-            "name": "Plan Estándar",
-            "description": "2 horas de atención completa incluyendo paseos y fotos",
-            "price": "25000",
-            "priceCurrency": "CLP"
-          },
-          {
-            "@type": "Offer",
-            "name": "Plan Premium",
-            "description": "3 horas de atención VIP con paseos extendidos y cuidados especiales",
-            "price": "35000",
-            "priceCurrency": "CLP"
-          }
-        ]
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+          ],
+          "opens": "09:00",
+          "closes": "20:00"
+        }
+      ],
+       "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+56978937482",
+        "contactType": "customer support",
+        "areaServed": "CL",
+        "availableLanguage": ["Spanish"]
       },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.9",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Person",
-          "name": "María González"
-        },
-        "reviewBody": "Excelente servicio, mi perrito quedó muy feliz y cuidado. ¡Totalmente recomendado!"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "107",
-        "bestRating": "5"
-      }
+       "potentialAction": {
+         "@type": "CommunicateAction",
+         "target": {
+           "@type": "EntryPoint",
+           "urlTemplate": "https://cuidadoresvip.cl/#contacto",
+            "actionPlatform": [
+             "http://schema.org/DesktopWebPlatform",
+             "http://schema.org/IOSPlatform",
+             "http://schema.org/AndroidPlatform"
+            ]
+         },
+         "name": "Contactar a Cuidadores VIP",
+         "description": "Solicita una cotización o haz una consulta sobre el cuidado de tu mascota."
+       }
+      // "sameAs": [...]
     }
     </script>
-    
-    <!-- Datos estructurados de FAQPage -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "¿Cómo garantizan la seguridad de mi mascota?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Todos nuestros cuidadores son profesionales verificados con experiencia en el cuidado de mascotas. Además, estamos asegurados y te enviamos actualizaciones durante nuestra visita."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Qué áreas de Santiago cubren?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Cubrimos todas las comunas de Santiago, incluyendo Las Condes, Providencia, Ñuñoa, La Reina, Vitacura, Lo Barnechea, Santiago Centro y otras áreas metropolitanas."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Cuál es la diferencia entre los planes de servicio?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "La principal diferencia es el tiempo de atención: Plan Básico (1 hora), Plan Estándar (2 horas) y Plan Premium (3 horas). Los planes más completos incluyen servicios adicionales como fotos, informes detallados y atención prioritaria."
-          }
-        }
-      ]
-    }
-    </script>
-    
-    <!-- Enlaces a recursos externos -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/css/main.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    
-    <!-- Google reCAPTCHA con carga diferida -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    
-    <!-- Estilos críticos inline para mejorar el rendimiento -->
-    <style>
-        :root {
-            --color-primary: #4CAF50;
-            --color-secondary: #FF9800;
-            --color-accent: #8BC34A;
-            --transition-normal: all 0.3s ease;
-            --border-radius-sm: 4px;
-            --border-radius-md: 8px;
-            --border-radius-lg: 12px;
-        }
-        
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Nunito', sans-serif;
-            color: #333;
-            line-height: 1.6;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .logo img {
-            height: 60px;
-            width: auto;
-        }
-        
-        @media (max-width: 768px) {
-            .logo img {
-                height: 45px;
-            }
-        }
-    </style>
 
-    <!-- Verificación de Google Search Console -->
-    <meta name="google-site-verification" content="TuCódigoDeVerificación">
 </head>
 <body>
-    <!-- Botón volver arriba con efecto mejorado -->
-    <a href="#" class="back-to-top" aria-label="Volver arriba" role="button" tabindex="0">
-        <i class="fas fa-arrow-up" aria-hidden="true"></i>
-        <span class="sr-only">Volver al inicio de la página</span>
-    </a>
-    
-    <!-- Header con navegación mejorada -->
-    <header class="header">
+
+    <header class="site-header">
         <div class="container">
-            <nav class="navbar">
-                <a href="#" class="logo" aria-label="CuidadoresVIP - Inicio">
-                    <img src="./assets/images/logo-cleaning.png" alt="CuidadoresVIP Logo" width="80" height="80" fetchpriority="high">
-                </a>
-                
-                <div class="mobile-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
-                    <i class="fas fa-bars" aria-hidden="true"></i>
-                </div>
-                
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="#inicio" class="scroll-link">Inicio</a></li>
-                    <li><a href="#servicios" class="scroll-link">Servicios</a></li>
-                    <li><a href="#nosotros" class="scroll-link">Nosotros</a></li>
-                    <li><a href="#galeria" class="scroll-link">Galería</a></li>
-                    <li><a href="#contacto" class="scroll-link">Contacto</a></li>
-                    <li class="cotiza-item"><a href="#contacto" class="btn btn-nav">¡Cotiza aquí!</a></li>
-                </ul>
+            <a href="/" class="site-title-link" aria-label="Cuidadores VIP - Ir a la página de inicio">
+                <span class="site-title-text-logo">CUIDADORESVIP.CL</span>
+                <!-- <img src="images/logo.webp" alt="Logo Cuidadores VIP" class="site-logo"> -->
+            </a>
+            <nav class="main-nav" id="main-nav-list">
+                 <ul>
+                    <li><a href="#inicio" class="active" aria-current="page">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#confianza">Confianza VIP</a></li>
+                    <li><a href="#como-funciona">Cómo Funciona</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                 </ul>
             </nav>
+             <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Alternar Menú" aria-expanded="false" aria-controls="main-nav-list">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
         </div>
     </header>
-    
-    <!-- Hero Section con efectos modernos -->
-    <section id="inicio" class="hero">
-        <div class="paw-pattern"></div>
-        <div class="hero-background-animation"></div>
-        
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="animate-title">Cuidado profesional para tus <span class="highlight">mascotas</span></h1>
-                <p class="hero-description">Cuidamos a tus perritos y gatitos con amor mientras no estás en casa. Servicio a domicilio con cuidadores certificados 24/7.</p>
-                <div class="hero-buttons">
-                    <a href="#servicios" class="btn btn-primary scroll-link">Nuestros Servicios</a>
-                    <a href="#contacto" class="btn btn-outline scroll-link">Contáctanos</a>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="inicio" class="hero hero-pets hero-v3">
+            <!-- *** DIV PARA LA IMAGEN DE FONDO *** -->
+            <div class="hero-background-image"></div>
+            <div class="hero-background-gradient"></div> <!-- Overlay/Gradiente -->
+            <div class="container hero-content">     <!-- Contenido (Texto, Botones) -->
+                <div class="hero-text-animation">
+                    <h1>Deja a tu regalón <span class="highlight">en las mejores manos</span></h1>
+                    <p class="subtitle">Cuidado profesional y con cariño para perros y gatos a domicilio en Santiago. ¡Tu tranquilidad es nuestra prioridad!</p>
                 </div>
-                <div class="hero-features">
-                    <div class="feature">
-                        <i class="fas fa-paw"></i>
-                        <span>Cuidadores certificados</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-home"></i>
-                        <span>Servicio a domicilio</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-heart"></i>
-                        <span>Atención personalizada</span>
-                    </div>
-                </div>
-                
-                <!-- Nuevo: Estadísticas de servicio para aumentar confianza -->
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">500+</span>
-                        <span class="stat-text">Mascotas felices</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">24/7</span>
-                        <span class="stat-text">Atención disponible</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-text">Satisfacción</span>
-                    </div>
+                <div class="hero-actions hero-buttons-animation">
+                    <a href="#contacto" class="cta-button button-primary-v3">
+                         <i class="fas fa-paw" aria-hidden="true"></i> Cotiza el Cuidado Aquí
+                    </a>
+                    <a href="https://wa.me/56978937482?text=¡Hola%20Cuidadores%20VIP!%20Quisiera%20consultar%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" class="cta-button button-secondary-v3 whatsapp-direct">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i> Háblanos por WhatsApp
+                    </a>
                 </div>
             </div>
-        </div>
-        <div class="hero-wave"></div>
-    </section>
-    
-    <!-- Servicios Section con optimizaciones -->
-    <section id="servicios" class="bg-light services-section">
-        <div class="container">
-            <div class="section-header animate-on-scroll">
-                <h2>¿Qué Plan es Perfecto para tu Mascota?</h2>
-                <p class="section-subtitle">Tu mascota merece lo mejor. Elige el plan que se adapte a sus necesidades y <strong>ahorra tiempo</strong> mientras nosotros nos encargamos de todo.</p>
-            </div>
-            
-            <div class="service-comparison animate-on-scroll">
-                <div class="service-selector">
-                    <div class="service-option" data-plan="basico">
-                        <h3>Plan Básico</h3>
-                        <div class="service-price">$15.000</div>
-                        <p>1 hora de atención</p>
-                    </div>
-                    <div class="service-option recommended" data-plan="estandar">
-                        <div class="recommended-badge">Más Popular</div>
-                        <h3>Plan Estándar</h3>
-                        <div class="service-price">$25.000</div>
-                        <p>2 horas de atención</p>
-                    </div>
-                    <div class="service-option" data-plan="premium">
+        </section>
+
+        <!-- SECCIÓN SERVICIOS / PLANES -->
+        <section id="servicios" class="services-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Nuestros Planes de Cuidado <span class="vip-flair">VIP</span></h2>
+                <p class="section-description">Elige el tiempo perfecto para las necesidades de tu mascota. Cuidado experto y lleno de cariño, siempre en la comodidad de su hogar.</p>
+                <div class="plans-grid">
+                    <!-- Plan Básico -->
+                    <article class="plan-card">
+                        <div class="plan-icon"><i class="fas fa-clock fa-2x"></i></div>
+                        <h3>Plan Esencial</h3>
+                        <p class="plan-duration">1 Hora de Atención</p>
+                        <p class="plan-price">$15.000</p>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check-circle"></i> Atención Personalizada</li>
+                            <li><i class="fas fa-check-circle"></i> Paseo corto o alimentación</li>
+                            <li><i class="fas fa-check-circle"></i> Cuidado en su hogar</li>
+                            <li><i class="fas fa-check-circle"></i> Cuidador Verificado</li>
+                        </ul>
+                        <a href="#contacto" class="cta-button plan-cta" data-plan="Plan Esencial (1 Hora)">¡Lo quiero!</a>
+                    </article>
+
+                    <!-- Plan Estándar (Popular) -->
+                    <article class="plan-card popular">
+                         <span class="popular-badge">Más Popular</span>
+                        <div class="plan-icon"><i class="fas fa-star fa-2x"></i></div>
+                        <h3>Plan Completo</h3>
+                        <p class="plan-duration">2 Horas de Atención</p>
+                        <p class="plan-price">$25.000</p>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check-circle"></i> Todo lo del Plan Esencial</li>
+                            <li><i class="fas fa-check-circle"></i> Más tiempo para paseo y juegos</li>
+                            <li><i class="fas fa-check-circle"></i> Alimentación completa</li>
+                            <li><i class="fas fa-check-circle"></i> Limpieza básica (ej. arenero)</li>
+                        </ul>
+                        <a href="#contacto" class="cta-button plan-cta" data-plan="Plan Completo (2 Horas)">¡Este es!</a>
+                    </article>
+
+                    <!-- Plan Premium -->
+                    <article class="plan-card">
+                        <div class="plan-icon"><i class="fas fa-heart fa-2x"></i></div>
                         <h3>Plan Premium</h3>
-                        <div class="service-price">$35.000</div>
-                        <p>3 horas de atención</p>
-                    </div>
+                        <p class="plan-duration">3 Horas de Atención</p>
+                        <p class="plan-price">$35.000</p>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check-circle"></i> Todo lo del Plan Completo</li>
+                            <li><i class="fas fa-check-circle"></i> Paseos extendidos</li>
+                            <li><i class="fas fa-check-circle"></i> Juegos personalizados</li>
+                            <li><i class="fas fa-check-circle"></i> Mimos y regaloneo extra</li>
+                            <li><i class="fas fa-plus-circle"></i> *Ideal para mascotas activas*</li>
+                        </ul>
+                         <a href="#contacto" class="cta-button plan-cta" data-plan="Plan Premium (3 Horas)">¡Regalonear!</a>
+                    </article>
                 </div>
-                
-                <div class="service-details">
-                    <div class="service-detail-content" id="plan-basico">
-                        <h3>Plan Básico - Cuidado Esencial</h3>
-                        <p class="service-tagline">Ideal para necesidades puntuales y mascotas independientes</p>
-                        
-                        <div class="service-benefits">
-                            <div class="benefit-item">
-                                <i class="fas fa-clock"></i>
-                                <div>
-                                    <h4>1 Hora de Atención Personalizada</h4>
-                                    <p>Perfecta para paseos cortos o alimentación</p>
-                                </div>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-home"></i>
-                                <div>
-                                    <h4>Cuidado en el Hogar</h4>
-                                    <p>Tu mascota permanece en su ambiente familiar</p>
-                                </div>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-shield-alt"></i>
-                                <div>
-                                    <h4>Cuidadores Verificados</h4>
-                                    <p>Personal con experiencia y amor por los animales</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <a href="#contacto" class="btn scroll-link">¡Quiero este plan! <i class="fas fa-arrow-right"></i></a>
+                 <div class="more-time-info">
+                    <p><i class="fas fa-info-circle"></i> <strong>¿Necesitas más tiempo?</strong> ¡No hay problema! Cada hora adicional tiene un valor de solo <strong>$10.000</strong>.</p>
+                 </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CONFIANZA VIP -->
+        <section id="confianza" class="trust-section section-padding-alt">
+            <div class="container">
+                <h2 class="section-title">¿Por qué Confiar en Cuidadores <span class="vip-flair">VIP</span>?</h2>
+                <p class="section-description">Entendemos que tu mascota es familia. Por eso, nuestro compromiso es total con su bienestar y tu tranquilidad.</p>
+                <div class="trust-features-grid">
+                    <div class="trust-feature">
+                        <i class="fas fa-shield-alt fa-3x trust-icon"></i>
+                        <h3>Cuidadores Verificados</h3>
+                        <p>Chilenos con experiencia (+5 años), antecedentes revisados y entrevista psicológica. ¡Solo los mejores!</p>
                     </div>
-                    
-                    <div class="service-detail-content active" id="plan-estandar">
-                        <h3>Plan Estándar - La Elección Perfecta</h3>
-                        <p class="service-tagline">Balance ideal entre tiempo y atención para tu mascota</p>
-                        
-                        <div class="service-benefits">
-                            <div class="benefit-item">
-                                <i class="fas fa-clock"></i>
-                                <div>
-                                    <h4>2 Horas de Atención Completa</h4>
-                                    <p>Tiempo suficiente para paseos, juegos y alimentación</p>
-                                </div>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-camera"></i>
-                                <div>
-                                    <h4>Fotos y Videos de tu Mascota</h4>
-                                    <p>Recibe actualizaciones durante la visita</p>
-                                </div>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-file-alt"></i>
-                                <div>
-                                    <h4>Informe Detallado</h4>
-                                    <p>Conoce todo lo que hizo tu mascota durante la visita</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <a href="#contacto" class="btn btn-highlight scroll-link">¡Quiero este plan! <i class="fas fa-arrow-right"></i></a>
+                    <div class="trust-feature">
+                        <i class="fas fa-home fa-3x trust-icon"></i>
+                        <h3>Cuidado en *Su* Hogar</h3>
+                        <p>Menos estrés para tu mascota al quedarse en su ambiente familiar y conocido. ¡Comodidad garantizada!</p>
                     </div>
-                    
-                    <div class="service-detail-content" id="plan-premium">
-                        <h3>Plan Premium - Experiencia VIP</h3>
-                        <p class="service-tagline">La atención más completa para mascotas exigentes</p>
-                        
-                        <div class="service-benefits">
-                            <div class="benefit-item">
-                                <i class="fas fa-clock"></i>
-                                <div>
-                                    <h4>3 Horas de Atención Premium</h4>
-                                    <p>Tiempo extendido para todas las necesidades de tu mascota</p>
-                                </div>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-paw"></i>
-                                <div>
-                                    <h4>Cuidados Especiales</h4>
-                                    <p>Incluye cepillado, paseos extendidos y juegos personalizados</p>
-                                </div>
-                            </div>
-                            <div class="benefit-item">
-                                <i class="fas fa-heart"></i>
-                                <div>
-                                    <h4>Atención Prioritaria</h4>
-                                    <p>Disponibilidad garantizada incluso en fechas de alta demanda</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <a href="#contacto" class="btn scroll-link">¡Quiero este plan! <i class="fas fa-arrow-right"></i></a>
+                    <div class="trust-feature">
+                        <i class="fas fa-heartbeat fa-3x trust-icon"></i>
+                        <h3>Amor Real por los Animales</h3>
+                        <p>No es solo un trabajo, es nuestra pasión. Tratamos a cada regalón como si fuera nuestro.</p>
                     </div>
-                </div>
-                
-                <div class="service-guarantee">
-                    <i class="fas fa-medal"></i>
-                    <div>
-                        <h4>100% Garantía de Satisfacción</h4>
-                        <p>Si no estás completamente satisfecho con nuestro servicio, te devolvemos tu dinero.</p>
+                    <div class="trust-feature">
+                        <i class="fas fa-camera-retro fa-3x trust-icon"></i>
+                        <h3>Fotos y Novedades</h3>
+                        <p>Te mantenemos al tanto con fotos y mensajitos para que veas lo bien que lo está pasando tu compañero.</p>
+                    </div>
+                    <div class="trust-feature">
+                        <i class="fas fa-briefcase-medical fa-3x trust-icon"></i>
+                        <h3>Experiencia con Cuidados</h3>
+                        <p>Podemos administrar medicamentos básicos siguiendo al pie de la letra tus indicaciones.</p>
+                    </div>
+                     <div class="trust-feature">
+                        <i class="fas fa-dog fa-3x trust-icon"></i> <i class="fas fa-cat fa-3x trust-icon"></i>
+                        <h3>Especialistas en Perros y Gatos</h3>
+                        <p>Aunque amamos a todos los animales, nuestro fuerte son los regalones de cuatro patas más comunes.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- Nosotros Section con mejoras -->
-    <section id="nosotros" class="about-section">
+        </section>
+
+        <!-- SECCIÓN CÓMO FUNCIONA -->
+        <section id="como-funciona" class="how-it-works-section section-padding">
+            <div class="container">
+                <h2 class="section-title">Así de Fácil es Tener a tu Mascota Feliz</h2>
+                <div class="steps-grid">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <i class="fas fa-mobile-alt fa-3x step-icon"></i>
+                        <h3>Contáctanos</h3>
+                        <p>Llena el formulario o escríbenos por WhatsApp contándonos qué necesitas (fechas, mascota, plan).</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                         <i class="fas fa-calendar-check fa-3x step-icon"></i>
+                        <h3>Coordinamos</h3>
+                        <p>Te respondemos al tiro, confirmamos detalles, disponibilidad y agendamos el servicio.</p>
+                    </div>
+                    <div class="step">
+                         <div class="step-number">3</div>
+                        <i class="fas fa-laugh-beam fa-3x step-icon"></i>
+                        <h3>¡Mascota Feliz!</h3>
+                        <p>Nuestro cuidador VIP llega a tu casa para entregarle todo el cariño y atención a tu regalón.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN TESTIMONIO -->
+        <section id="testimonios" class="testimonial-section section-padding-alt">
+             <div class="container">
+                 <h2 class="section-title">Lo que Dicen Nuestros Clientes <span class="vip-flair">VIP</span></h2>
+                 <div class="testimonial-card">
+                     <blockquote>
+                         <p>"¡Totalmente recomendados! Dejé a mi perrita Luna con ellos durante mis vacaciones y estuve súper tranquila. Me mandaban fotos todos los días y se notaba que la cuidaron con mucho amor. ¡Un siete!"</p>
+                         <cite>– Carolina R., Providencia</cite>
+                     </blockquote>
+                 </div>
+             </div>
+        </section>
+
+        <!-- SECCIÓN CONTACTO -->
+        <section id="contacto" class="contact-section section-padding">
+            <div class="container">
+                <h2 class="section-title">¿Listo/a para darle lo mejor a tu Mascota?</h2>
+                <p class="section-description">Completa el formulario y te contactaremos a la brevedad para coordinar el cuidado VIP que tu regalón merece. O si prefieres, ¡contáctanos directo!</p>
+
+                <!-- Información de Contacto Directo -->
+                <div class="contact-info-direct">
+                    <a href="https://wa.me/56978937482?text=¡Hola%20Cuidadores%20VIP!%20Quisiera%20consultar%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" class="contact-direct-link whatsapp-link">
+                        <i class="fab fa-whatsapp"></i> +56 9 7893 7482 (WhatsApp)
+                    </a>
+                    <a href="tel:+56978937482" class="contact-direct-link phone-link">
+                        <i class="fas fa-phone-alt"></i> +56 9 7893 7482 (Llamar)
+                    </a>
+                </div>
+
+                <!-- Formulario de Contacto -->
+                <form id="contact-form" class="contact-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                            <label for="name">Tu Nombre <span aria-hidden="true">*</span></label>
+                            <input type="text" id="name" name="name" required placeholder="Ej: Juan Pérez" aria-required="true" autocomplete="name">
+                        </div>
+                        <div class="form-group half-width">
+                            <label for="phone">Tu Teléfono (WhatsApp) <span aria-hidden="true">*</span></label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+56 9 XXXX XXXX / 9 XXXX XXXX" aria-required="true" autocomplete="tel">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                         <div class="form-group half-width">
+                            <label for="email">Tu Email <span class="optional-label">(Opcional)</span></label>
+                            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" autocomplete="email">
+                         </div>
+                        <div class="form-group half-width">
+                            <label for="comuna">Comuna en Santiago <span aria-hidden="true">*</span></label>
+                            <input type="text" id="comuna" name="comuna" required placeholder="Ej: Las Condes, Ñuñoa" aria-required="true" autocomplete="address-level2">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pet-type">Tipo de Mascota <span aria-hidden="true">*</span></label>
+                        <select id="pet-type" name="pet-type" required aria-required="true">
+                            <option value="" disabled selected>Selecciona...</option>
+                            <option value="Perro">Perro</option>
+                            <option value="Gato">Gato</option>
+                            <option value="Perro y Gato">Perro y Gato</option>
+                            <option value="Otro">Otro (Especificar en mensaje)</option>
+                        </select>
+                    </div>
+                     <div class="form-group">
+                        <label for="service-plan">Plan o Horas Deseadas <span aria-hidden="true">*</span></label>
+                        <select id="service-plan" name="service-plan" required aria-required="true">
+                             <option value="" disabled selected>Selecciona...</option>
+                            <option value="Plan Esencial (1 Hora)">Plan Esencial (1 Hora)</option>
+                            <option value="Plan Completo (2 Horas)">Plan Completo (2 Horas)</option>
+                            <option value="Plan Premium (3 Horas)">Plan Premium (3 Horas)</option>
+                            <option value="Mas de 3 Horas">Más de 3 Horas (Indicar en mensaje)</option>
+                            <option value="Solo Consulta">Solo quiero consultar</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="dates">Fechas Estimadas <span class="optional-label">(Opcional)</span></label>
+                        <input type="text" id="dates" name="dates" placeholder="Ej: 15 al 20 de Agosto, Fines de semana">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tu Mensaje / Detalles Adicionales <span aria-hidden="true">*</span></label>
+                        <textarea id="message" name="message" rows="4" required placeholder="Cuéntanos un poco más sobre tu mascota, sus necesidades, o si tienes alguna consulta específica..." aria-required="true"></textarea>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="cta-button whatsapp-button large-button">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i> Enviar Consulta por WhatsApp
+                        </button>
+                        <div id="form-feedback" class="form-feedback" aria-live="assertive"></div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
         <div class="container">
-            <div class="about-grid">
-                <div class="about-content animate-on-scroll">
-                    <span class="section-badge">Sobre Nosotros</span>
-                    <h2>Cuidadores Profesionales para tu Mascota</h2>
-                    <p>Sabemos que dejar a tu peludo en casa no es fácil, por eso nos dedicamos a brindarles la atención y el cariño que necesitan. No solo cubrimos sus necesidades básicas como alimentación, agua fresca y limpieza, sino que también jugamos con ellos, les damos paseos y afecto para que no extrañen tu presencia.</p>
-                    <p><strong>¡Tú tranquilo, nosotros te mantenemos al tanto!</strong> Te enviaremos fotos, videos y un informe detallado de su comportamiento, salud y estado de ánimo. Así, sabrás que están felices y bien cuidados en todo momento.</p>
-                    
-                    <!-- Testimonial integrado -->
-                    <div class="about-testimonial">
-                        <div class="testimonial-quote">
-                            <i class="fas fa-quote-left"></i>
-                            <p>Dejar a mi perrito con CuidadoresVIP fue la mejor decisión. Recibí fotos y videos durante todo el día y cuando regresé estaba feliz y relajado.</p>
-                            <span class="testimonial-author">- Carolina Pérez, Santiago</span>
-                        </div>
-                    </div>
-                    
-                    <a href="#contacto" class="btn btn-primary scroll-link">Cotiza aquí</a>
-                </div>
-                <div class="about-img animate-on-scroll">
-                    <img src="./assets/images/nosotros.jpg" alt="Cuidadores profesionales atendiendo mascotas en Santiago" loading="lazy" width="600" height="400">
-                    <div class="about-img-decor"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="bg-light safety-section">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-img animate-on-scroll">
-                    <img src="./assets/images/sobre-nosotros.jpg" alt="Servicio seguro y confiable de cuidado de mascotas en Santiago" loading="lazy" width="600" height="400">
-                    <div class="trust-badges">
-                        <span class="badge"><i class="fas fa-check-circle"></i> Servicio verificado</span>
-                        <span class="badge"><i class="fas fa-shield-alt"></i> 100% Seguro</span>
-                    </div>
-                </div>
-                <div class="about-content animate-on-scroll">
-                    <span class="section-badge">Seguridad Garantizada</span>
-                    <h2>¿Por Qué Confiar en Nosotros?</h2>
-                    <p>En <strong>CuidadoresVIP</strong>, entendemos que dejar a tu mascota en manos de alguien más es una decisión importante. Por eso, nos comprometemos a ofrecerte un servicio <strong>seguro</strong>, <strong>respetuoso</strong> y <strong>100% confiable</strong>.</p>
-                    <p>Nuestro equipo está formado por profesionales de confianza que respetan no solo a tu mascota, sino también tu hogar y tu privacidad.</p>
-                    
-                    <div class="security-features">
-                        <div class="security-feature">
-                            <i class="fas fa-lock" aria-hidden="true"></i>
-                            <div>
-                                <h4>Privacidad Garantizada</h4>
-                                <p>No ingresamos a áreas no autorizadas de tu casa y jamás tomamos fotografías que no sean exclusivamente de tu mascota.</p>
-                            </div>
-                        </div>
-                        <div class="security-feature">
-                            <i class="fas fa-handshake" aria-hidden="true"></i>
-                            <div>
-                                <h4>Confianza y Profesionalismo</h4>
-                                <p>Cada cuidador ha sido rigurosamente seleccionado y capacitado para brindarte un servicio discreto, seguro y con el máximo respeto.</p>
-                            </div>
-                        </div>
-                        <div class="security-feature">
-                            <i class="fas fa-id-card" aria-hidden="true"></i>
-                            <div>
-                                <h4>Cuidadores Verificados</h4>
-                                <p>Todos nuestros cuidadores pasan por un exhaustivo proceso de selección que incluye verificación de antecedentes.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Botón con escasez para aumentar conversión -->
-                    <a href="#contacto" class="btn btn-secondary scroll-link">Agenda Ahora - ¡Cupos Limitados! <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Galería Section con efectos modernos -->
-    <section id="galeria" class="gallery-section">
-        <div class="container">
-            <div class="section-header animate-on-scroll">
-                <span class="section-badge">Galería</span>
-                <h2>Momentos Felices con Mascotas</h2>
-                <p class="section-subtitle">Descubre cómo cuidamos y disfrutamos con las mascotas que nos confían.</p>
-            </div>
-            
-            <div class="gallery animate-on-scroll">
-                <div class="gallery-item">
-                    <img src="./assets/images/pexels-gustavo-fring-3867636-1024x683.jpg" alt="Cuidador profesional jugando con perro en Santiago" loading="lazy" width="400" height="267" class="gallery-image">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-paw"></i>
-                        <h3 class="gallery-title">Paseos Diarios</h3>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./assets/images/pexels-nathan-cowley-713297-1024x683.jpg" alt="Perro feliz durante servicio de cuidado a domicilio" loading="lazy" width="400" height="267" class="gallery-image">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-paw"></i>
-                        <h3 class="gallery-title">Juegos Divertidos</h3>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./assets/images/pexels-cottonbro-4684372-1024x683.jpg" alt="Cuidado especializado para gatos en Santiago" loading="lazy" width="400" height="267" class="gallery-image">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-paw"></i>
-                        <h3 class="gallery-title">Cuidado de Gatos</h3>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./assets/images/pexels-pixabay-38325.jpg" alt="Paseo de perros por cuidadores profesionales" loading="lazy" width="400" height="267" class="gallery-image">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-paw"></i>
-                        <h3 class="gallery-title">Paseos Grupales</h3>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./assets/images/pexels-karolina-grabowska-4239109.jpg" alt="Mascota jugando durante servicio de cuidado" loading="lazy" width="400" height="267" class="gallery-image">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-paw"></i>
-                        <h3 class="gallery-title">Momentos Especiales</h3>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./assets/images/pexels-karolina-grabowska-4239031-1024x683.jpg" alt="Cuidado profesional para mascotas a domicilio" loading="lazy" width="400" height="267" class="gallery-image">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-paw"></i>
-                        <h3 class="gallery-title">Tiempo de Calidad</h3>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./assets/images/pexels-terry-magallanes-29828865-1024x684.jpg" alt="Perro en casa con cuidador profesional" loading="lazy" width="400" height="267" class="gallery-image">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-paw"></i>
-                        <h3 class="gallery-title">Cuidado en Casa</h3>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="./assets/images/pexels-kat-smith-551628-1024x683.jpg" alt="Gato feliz durante visita de cuidadores profesionales" loading="lazy" width="400" height="267" class="gallery-image">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-paw"></i>
-                        <h3 class="gallery-title">Atención Felina</h3>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Botón para ver más con efecto de llamado a la acción -->
-            <div class="text-center gallery-cta">
-                <a href="#contacto" class="btn btn-outline-secondary scroll-link">¿Quieres ver más? ¡Contrata nuestro servicio!</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Contacto Section con elementos persuasivos -->
-    <section id="contacto" class="contact-section">
-        <div class="floating-paws"></div>
-        <div class="container">
-            <div class="contact-wrapper">
-                <div class="contact-info animate-on-scroll">
-                    <div class="contact-header">
-                        <span class="contact-badge">¡Tu mascota merece lo mejor!</span>
-                        <h2>Contacta ahora y obtén <span class="highlight-text">15% de descuento</span> en tu primera visita</h2>
-                        <p class="contact-tagline">Nuestros expertos cuidadores están listos para atender a tu mascota con todo el amor y profesionalismo que merece.</p>
-                    </div>
-                    
-                    <div class="contact-benefits">
-                        <div class="benefit-pill">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Respuesta inmediata</span>
-                        </div>
-                        <div class="benefit-pill">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Cuidadores verificados</span>
-                        </div>
-                        <div class="benefit-pill">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Garantía de satisfacción</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Testimonial para aumentar confianza -->
-                    <div class="contact-testimonial">
-                        <div class="testimonial-avatar">
-                            <img src="./assets/images/testimonial-1.jpg" alt="Cliente satisfecho" loading="lazy" width="60" height="60">
-                        </div>
-                        <div class="testimonial-content">
-                            <div class="testimonial-stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p>"¡El servicio superó mis expectativas! Mi perrito estuvo feliz y bien cuidado. ¡Sin duda repetiré!"</p>
-                            <span class="testimonial-name">- Juan Martínez, Providencia</span>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-trust">
-                        <div class="trust-icons">
-                            <i class="fas fa-shield-alt"></i>
-                            <i class="fas fa-heart"></i>
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <p>Más de 500 mascotas felices nos respaldan</p>
-                    </div>
-                    
-                    <!-- Información de urgencia (escasez) -->
-                    <div class="urgency-message">
-                        <i class="fas fa-clock"></i>
-                        <p>La oferta del 15% de descuento expira pronto. ¡Contáctanos hoy!</p>
-                    </div>
-                </div>
-                
-                <div class="contact-form-container animate-on-scroll">
-                    <form id="contact-form" aria-labelledby="form-title">
-                        <h3 id="form-title">¿Listo para darle a tu mascota el cuidado que merece?</h3>
-                        
-                        <div class="form-group">
-                            <label for="nombre">Nombre completo</label>
-                            <div class="input-with-icon">
-                                <i class="fas fa-user"></i>
-                                <input type="text" id="nombre" class="form-control" placeholder="Ingresa tu nombre" required autocomplete="name">
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Correo electrónico</label>
-                            <div class="input-with-icon">
-                                <i class="fas fa-envelope"></i>
-                                <input type="email" id="email" class="form-control" placeholder="Ingresa tu email" required autocomplete="email">
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="telefono">Teléfono</label>
-                            <div class="input-with-icon">
-                                <i class="fas fa-phone"></i>
-                                <input type="tel" id="telefono" class="form-control" placeholder="Ingresa tu teléfono" required autocomplete="tel">
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="mascota">Tipo de mascota</label>
-                            <div class="input-with-icon">
-                                <i class="fas fa-paw"></i>
-                                <select id="mascota" class="form-control" required>
-                                    <option value="" disabled selected>Selecciona tu mascota</option>
-                                    <option value="Perro">Perro</option>
-                                    <option value="Gato">Gato</option>
-                                    <option value="Ambos">Perro y Gato</option>
-                                    <option value="Otro">Otro</option>
-                                </select>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="servicio">Selecciona un servicio</label>
-                            <div class="input-with-icon">
-                                <i class="fas fa-concierge-bell"></i>
-                                <select id="servicio" class="form-control" required>
-                                    <option value="" disabled selected>¿Qué servicio necesitas?</option>
-                                    <option value="Plan Básico - $15.000">Plan Básico - $15.000</option>
-                                    <option value="Plan Estándar - $25.000">Plan Estándar - $25.000</option>
-                                    <option value="Plan Premium - $35.000">Plan Premium - $35.000</option>
-                                </select>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="mensaje">Cuéntanos sobre tu mascota</label>
-                            <div class="input-with-icon textarea-icon">
-                                <i class="fas fa-comment"></i>
-                                <textarea id="mensaje" class="form-control" placeholder="Cuéntanos qué necesita tu mascota" rows="3" required></textarea>
-                            </div>
-                        </div>
-                        
-                        <!-- Google reCAPTCHA -->
-                        <div class="form-group captcha-container">
-                            <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
-                            <div class="captcha-info">
-                                <i class="fas fa-shield-alt"></i>
-                                <span>Verificación anti-spam para proteger tu experiencia</span>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <button type="button" id="enviar-whatsapp" class="btn-whatsapp pulse-animation">
-                                <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
-                                <span class="whatsapp-text">Contactar por WhatsApp</span>
-                            </button>
-                        </div>
-                        
-                        <div class="form-privacy">
-                            <i class="fas fa-lock"></i>
-                            <span>Tus datos están seguros. Nunca compartimos tu información.</span>
-                        </div>
-                        
-                        <div class="form-message" aria-live="polite"></div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer con diseño mejorado y optimizado -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="./assets/images/logo-cleaning.png" alt="CuidadoresVIP Logo" width="120" height="120" class="footer-logo">
-                    <p class="footer-tagline">Cuidado profesional para mascotas en Santiago</p>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/cuidadoresvip" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                        <a href="https://www.instagram.com/cuidadoresvip" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                        <a href="https://twitter.com/cuidadoresvip" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                        <a href="https://wa.me/51918647921" target="_blank" rel="noopener noreferrer" aria-label="Contáctanos por WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-links-container">
-                    <div class="footer-links-column">
-                        <h3>Navegación</h3>
-                        <div class="footer-links">
-                            <a href="#inicio" class="scroll-link">Inicio</a>
-                            <a href="#servicios" class="scroll-link">Servicios</a>
-                            <a href="#nosotros" class="scroll-link">Nosotros</a>
-                            <a href="#galeria" class="scroll-link">Galería</a>
-                            <a href="#contacto" class="scroll-link">Contacto</a>
-                        </div>
-                    </div>
-                    
-                    <div class="footer-links-column">
-                        <h3>Legal</h3>
-                        <div class="footer-links">
-                            <a href="politica-privacidad.html">Política de Privacidad</a>
-                            <a href="politica-cookies.html">Política de Cookies</a>
-                            <a href="terminos-condiciones.html">Términos y Condiciones</a>
-                        </div>
-                    </div>
-                    
-                    <div class="footer-links-column">
-                        <h3>Servicios</h3>
-                        <div class="footer-links">
-                            <a href="#servicios">Paseos de Mascotas</a>
-                            <a href="#servicios">Alimentación</a>
-                            <a href="#servicios">Cuidado VIP</a>
-                            <a href="#servicios">Atención Veterinaria</a>
-                        </div>
-                    </div>
-                    
-                    <div class="footer-links-column">
-                        <h3>Contacto</h3>
-                        <div class="footer-contact">
-                            <p><i class="fas fa-phone-alt"></i> +56 9 1234 5678</p>
-                            <p><i class="fas fa-envelope"></i> info@cuidadoresvip.cl</p>
-                            <p><i class="fas fa-map-marker-alt"></i> Santiago, Chile</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 CuidadoresVIP. Todos los derechos reservados.</p>
-                
-                <div class="payment-methods">
-                    <span>Métodos de pago:</span>
-                    <img src="./assets/images/payment/visa.svg" alt="Visa" width="40" height="25">
-                    <img src="./assets/images/payment/mastercard.svg" alt="Mastercard" width="40" height="25">
-                    <img src="./assets/images/payment/webpay.svg" alt="WebPay" width="40" height="25">
-                </div>
-                
-                <div class="privacy-policy-message">
-                    <p>Al utilizar nuestro sitio web, aceptas nuestra <a href="politica-privacidad.html">Política de Privacidad</a> y <a href="terminos-condiciones.html">Términos y Condiciones</a>. Nos comprometemos a proteger tus datos personales y a brindarte la mejor experiencia posible.</p>
-                </div>
-            </div>
+           <p>© <span id="current-year"></span> CUIDADORESVIP.CL - Cuidado de mascotas con cariño en Santiago. 😉</p>
+             <div>
+                <a href="/politica-privacidad.html">Política de Privacidad</a> |
+                <a href="/terminos-condiciones.html">Términos y Condiciones</a>
+             </div>
         </div>
     </footer>
 
-    <!-- Lightbox para la galería con optimizaciones -->
-    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
-        <div class="lightbox-close" id="lightbox-close" role="button" tabindex="0" aria-label="Cerrar">
-            <i class="fas fa-times"></i>
-        </div>
-        <div class="lightbox-content">
-            <img src="" alt="" class="lightbox-image" id="lightbox-image">
-            <div class="lightbox-caption" id="lightbox-caption"></div>
-        </div>
-        <div class="lightbox-nav">
-            <button id="lightbox-prev" aria-label="Imagen anterior"><i class="fas fa-chevron-left"></i></button>
-            <button id="lightbox-next" aria-label="Imagen siguiente"><i class="fas fa-chevron-right"></i></button>
-        </div>
-        <div class="lightbox-paw-decoration">
-            <i class="fas fa-paw lightbox-paw"></i>
-            <i class="fas fa-paw lightbox-paw"></i>
-            <i class="fas fa-paw lightbox-paw"></i>
-            <i class="fas fa-paw lightbox-paw"></i>
-        </div>
-    </div>
+    <!-- Scripts -->
+    <script src="js/script.js" defer></script>
 
-    <!-- Cookie Consent Banner -->
-    <div class="cookie-banner" id="cookie-banner" aria-labelledby="cookie-title" aria-describedby="cookie-description">
-        <div class="cookie-content">
-            <h4 id="cookie-title">Uso de Cookies</h4>
-            <p id="cookie-description">Utilizamos cookies para mejorar tu experiencia en nuestro sitio web. Al continuar navegando, aceptas nuestra <a href="politica-cookies.html">política de cookies</a>.</p>
-            <div class="cookie-buttons">
-                <button id="accept-cookies" class="btn btn-primary">Aceptar</button>
-                <button id="reject-cookies" class="btn btn-outline">Rechazar</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Estilos no críticos cargados de forma diferida -->
-    <link rel="stylesheet" href="./assets/css/animations.css" media="print" onload="this.media='all'">
-    
-    <!-- Scripts principales -->
-    <script src="./assets/js/main.js" defer></script>
-    
-    <!-- Mejoras de rendimiento con scripts críticos inline -->
-    <script>
-        // Optimizador de carga de imágenes
-        document.addEventListener('DOMContentLoaded', function() {
-            // LCP (Largest Contentful Paint) optimization
-            const heroImage = document.querySelector('.hero-background-animation');
-            if (heroImage) {
-                heroImage.classList.add('loaded');
-            }
-            
-            // Lazy load images that are outside viewport
-            if ('loading' in HTMLImageElement.prototype) {
-                // Browser supports native lazy loading
-                document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-                    // Ensure proper sizes attribute for responsive images
-                    if (!img.hasAttribute('sizes')) {
-                        img.setAttribute('sizes', '(max-width: 768px) 100vw, 50vw');
-                    }
-                });
-            } else {
-                // Fallback for browsers that don't support native lazy loading
-                // Load lazysizes script
-                const lazySizesScript = document.createElement('script');
-                lazySizesScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
-                lazySizesScript.async = true;
-                document.body.appendChild(lazySizesScript);
-                
-                // Add lazysizes class to images
-                document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-                    img.classList.add('lazyload');
-                    img.setAttribute('data-src', img.src);
-                    img.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3C/svg%3E';
-                });
-            }
-            
-            // Initialize paw pattern animation
-            const pawPattern = document.querySelector('.paw-pattern');
-            if (pawPattern) {
-                for (let i = 0; i < 20; i++) {
-                    const paw = document.createElement('i');
-                    paw.className = 'fas fa-paw floating-paw';
-                    paw.style.left = `${Math.random() * 100}%`;
-                    paw.style.top = `${Math.random() * 100}%`;
-                    paw.style.animationDelay = `${Math.random() * 10}s`;
-                    paw.style.animationDuration = `${10 + Math.random() * 20}s`;
-                    paw.style.opacity = `${0.1 + Math.random() * 0.3}`;
-                    paw.style.fontSize = `${10 + Math.random() * 20}px`;
-                    pawPattern.appendChild(paw);
-                }
-            }
-            
-            // Initialize floating paws in contact section
-            const floatingPaws = document.querySelector('.floating-paws');
-            if (floatingPaws) {
-                for (let i = 0; i < 15; i++) {
-                    const paw = document.createElement('i');
-                    paw.className = 'fas fa-paw floating-paw';
-                    paw.style.left = `${Math.random() * 100}%`;
-                    paw.style.top = `${Math.random() * 100}%`;
-                    paw.style.animationDelay = `${Math.random() * 5}s`;
-                    paw.style.animationDuration = `${5 + Math.random() * 10}s`;
-                    paw.style.opacity = `${0.1 + Math.random() * 0.2}`;
-                    paw.style.fontSize = `${8 + Math.random() * 15}px`;
-                    floatingPaws.appendChild(paw);
-                }
-            }
-            
-            // Service selector interaction
-            const serviceOptions = document.querySelectorAll('.service-option');
-            if (serviceOptions.length > 0) {
-                serviceOptions.forEach(option => {
-                    option.addEventListener('click', function() {
-                        // Remove active class from all options
-                        serviceOptions.forEach(opt => opt.classList.remove('active'));
-                        
-                        // Add active class to clicked option
-                        this.classList.add('active');
-                        
-                        // Get the plan ID
-                        const planId = this.getAttribute('data-plan');
-                        
-                        // Hide all service details
-                        document.querySelectorAll('.service-detail-content').forEach(content => {
-                            content.classList.remove('active');
-                        });
-                        
-                        // Show the selected service details
-                        document.getElementById(`plan-${planId}`).classList.add('active');
-                    });
-                });
-            }
-            
-            // WhatsApp form submission
-            const whatsappBtn = document.getElementById('enviar-whatsapp');
-            if (whatsappBtn) {
-                whatsappBtn.addEventListener('click', function() {
-                    const form = document.getElementById('contact-form');
-                    if (!form) return;
-                    
-                    // Basic form validation
-                    const requiredFields = form.querySelectorAll('[required]');
-                    let isValid = true;
-                    
-                    requiredFields.forEach(field => {
-                        if (!field.value.trim()) {
-                            isValid = false;
-                            field.classList.add('error');
-                            field.closest('.form-group').classList.add('has-error');
-                        } else {
-                            field.classList.remove('error');
-                            field.closest('.form-group').classList.remove('has-error');
-                        }
-                    });
-                    
-                    if (!isValid) {
-                        const formMessage = form.querySelector('.form-message');
-                        if (formMessage) {
-                            formMessage.textContent = 'Por favor, completa todos los campos requeridos.';
-                            formMessage.className = 'form-message error';
-                        }
-                        return;
-                    }
-                    
-                    // Check if reCAPTCHA is completed
-                    try {
-                        const captchaResponse = grecaptcha && grecaptcha.getResponse ? grecaptcha.getResponse() : '';
-                        
-                        if (!captchaResponse) {
-                            const formMessage = form.querySelector('.form-message');
-                            if (formMessage) {
-                                formMessage.textContent = 'Por favor, completa el CAPTCHA para verificar que no eres un robot.';
-                                formMessage.className = 'form-message error';
-                                
-                                // Highlight CAPTCHA
-                                const captchaContainer = document.querySelector('.captcha-container');
-                                if (captchaContainer) {
-                                    captchaContainer.classList.add('shake');
-                                    setTimeout(() => {
-                                        captchaContainer.classList.remove('shake');
-                                    }, 800);
-                                }
-                            }
-                            return;
-                        }
-                        
-                        // Collect form data
-                        const nombre = document.getElementById('nombre').value;
-                        const email = document.getElementById('email').value;
-                        const telefono = document.getElementById('telefono').value;
-                        const mascota = document.getElementById('mascota').value;
-                        const servicio = document.getElementById('servicio').value;
-                        const mensaje = document.getElementById('mensaje').value;
-                        
-                        // Build WhatsApp message
-                        let whatsappMessage = `Hola, soy ${nombre}. `;
-                        whatsappMessage += `Mi email es: ${email}. `;
-                        whatsappMessage += `Mi teléfono es: ${telefono}. `;
-                        whatsappMessage += `Tipo de mascota: ${mascota}. `;
-                        whatsappMessage += `Servicio solicitado: ${servicio}. `;
-                        whatsappMessage += `Mensaje: ${mensaje}`;
-                        
-                        // Encode message for URL
-                        const encodedMessage = encodeURIComponent(whatsappMessage);
-                        const whatsappUrl = `https://wa.me/51918647921?text=${encodedMessage}`;
-                        
-                        // Show success message
-                        const formMessage = form.querySelector('.form-message');
-                        if (formMessage) {
-                            formMessage.textContent = '¡Gracias! Redirigiendo a WhatsApp...';
-                            formMessage.className = 'form-message success';
-                        }
-                        
-                        // Redirect to WhatsApp
-                        setTimeout(() => {
-                            window.open(whatsappUrl, '_blank');
-                        }, 500);
-                        
-                    } catch (error) {
-                        console.error('Error en el envío del formulario:', error);
-                        const formMessage = form.querySelector('.form-message');
-                        if (formMessage) {
-                            formMessage.textContent = 'Ocurrió un error. Por favor, intenta nuevamente.';
-                            formMessage.className = 'form-message error';
-                        }
-                    }
-                });
-            }
-            
-            // Cookie consent handling
-            const cookieBanner = document.getElementById('cookie-banner');
-            const acceptCookiesBtn = document.getElementById('accept-cookies');
-            const rejectCookiesBtn = document.getElementById('reject-cookies');
-            
-            // Check if user has already made a choice
-            const cookieConsent = localStorage.getItem('cookieConsent');
-            
-            if (cookieConsent === null && cookieBanner) {
-                // Show the banner with a slight delay for better UX
-                setTimeout(() => {
-                    cookieBanner.classList.add('active');
-                }, 1000);
-                
-                // Handle accept button
-                if (acceptCookiesBtn) {
-                    acceptCookiesBtn.addEventListener('click', () => {
-                        localStorage.setItem('cookieConsent', 'accepted');
-                        cookieBanner.classList.remove('active');
-                        // Here you could initialize additional cookies or tracking
-                    });
-                }
-                
-                // Handle reject button
-                if (rejectCookiesBtn) {
-                    rejectCookiesBtn.addEventListener('click', () => {
-                        localStorage.setItem('cookieConsent', 'rejected');
-                        cookieBanner.classList.remove('active');
-                        // Here you could disable non-essential cookies
-                    });
-                }
-            }
-        });
-        
-        // Intersection Observer for scroll animations
-        if ('IntersectionObserver' in window) {
-            const animateOnScrollElements = document.querySelectorAll('.animate-on-scroll');
-            
-            const animationObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate');
-                        // Stop observing once animated
-                        animationObserver.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            });
-            
-            animateOnScrollElements.forEach(element => {
-                animationObserver.observe(element);
-            });
-        } else {
-            // Fallback for browsers that don't support Intersection Observer
-            document.querySelectorAll('.animate-on-scroll').forEach(element => {
-                element.classList.add('animate');
-            });
-        }
-    </script>
-    
-    <!-- Web Vitals & Analytics with performance optimization -->
-    <script>
-        // Send performance metrics to analytics if user has accepted cookies
-        if (localStorage.getItem('cookieConsent') === 'accepted') {
-            // Defer non-critical scripts for better performance
-            window.addEventListener('load', function() {
-                setTimeout(function() {
-                    // Analytics script - load after everything else
-                    const analyticsScript = document.createElement('script');
-                    analyticsScript.src = 'https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X';
-                    analyticsScript.async = true;
-                    document.body.appendChild(analyticsScript);
-                    
-                    // Initialize analytics
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'UA-XXXXXXXXX-X');
-                    
-                }, 2000); // 2 seconds delay for analytics
-            });
-        }
-    </script>
 </body>
 </html>
