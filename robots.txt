@@ -1,4 +1,4 @@
-# Robots.txt para Cuidadores VIP
+# Robots.txt para Cuidadores VIP (Landing Page Estática)
 # Fecha: 2025-04-02
 
 User-agent: *
@@ -8,15 +8,13 @@ Allow: /
 Sitemap: https://cuidadoresvip.cl/sitemap.xml
 
 # Permitir acceso a recursos estáticos
-Allow: /wp-content/uploads/
-Allow: /wp-content/themes/
-Allow: /wp-includes/images/
+Allow: /css/
+Allow: /js/
+Allow: /images/
 
 # Permitir acceso a páginas estáticas
-Allow: /about/
-Allow: /contact/
-Allow: /services/
-Allow: /blog/
+Allow: /politica-privacidad.html
+Allow: /terminos-condiciones.html
 
 # Permitir acceso a archivos estáticos
 Allow: *.css$
@@ -24,23 +22,60 @@ Allow: *.js$
 Allow: *.jpg$
 Allow: *.jpeg$
 Allow: *.png$
-Allow: *.gif$
-Allow: *.pdf$
-Allow: *.docx$
-Allow: *.xlsx$
+Allow: *.webp$
 
-# Permitir acceso a feeds
-Allow: /feed/
-Allow: /comments/feed/
+# Directivas SEO
+Disallow: /admin/
+Disallow: /login/
+Disallow: /logout/
+Disallow: /wp-*
 
-# Permitir acceso a páginas de error
-Allow: /404/
+# Directivas para bots específicos
+User-agent: Googlebot
+Allow: /
 
-# Permitir acceso a páginas de búsqueda
-Allow: /search/
+User-agent: Bingbot
+Allow: /
 
-# Permitir acceso a páginas de categorías
-Allow: /category/
+User-agent: Yandex
+Allow: /
 
-# Permitir acceso a páginas de etiquetas
-Allow: /tag/
+User-agent: Baiduspider
+Allow: /
+
+# Directivas para bots maliciosos
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Directivas para bots de imágenes
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: Bingbot-Image
+Allow: /images/
+
+# Directivas para bots de video
+User-agent: Googlebot-Video
+Allow: /
+
+# Directivas para bots de noticias
+User-agent: Googlebot-News
+Allow: /
+
+# Directivas para bots de productos
+User-agent: Googlebot-Products
+Allow: /
+
+# Directivas para bots de descubrimiento
+User-agent: Googlebot-Discovery
+Allow: /
+
+# Directivas para bots de indexación
+User-agent: Googlebot-Index
+Allow: /
