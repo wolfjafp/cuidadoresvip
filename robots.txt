@@ -1,0 +1,46 @@
+# Robots.txt para Cuidadores VIP
+# Fecha: 2025-04-02
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://cuidadoresvip.cl/sitemap.xml
+
+# Permitir acceso a recursos estáticos
+Allow: /wp-content/uploads/
+Allow: /wp-content/themes/
+Allow: /wp-includes/images/
+
+# Permitir acceso a páginas estáticas
+Allow: /about/
+Allow: /contact/
+Allow: /services/
+Allow: /blog/
+
+# Permitir acceso a archivos estáticos
+Allow: *.css$
+Allow: *.js$
+Allow: *.jpg$
+Allow: *.jpeg$
+Allow: *.png$
+Allow: *.gif$
+Allow: *.pdf$
+Allow: *.docx$
+Allow: *.xlsx$
+
+# Permitir acceso a feeds
+Allow: /feed/
+Allow: /comments/feed/
+
+# Permitir acceso a páginas de error
+Allow: /404/
+
+# Permitir acceso a páginas de búsqueda
+Allow: /search/
+
+# Permitir acceso a páginas de categorías
+Allow: /category/
+
+# Permitir acceso a páginas de etiquetas
+Allow: /tag/

@@ -171,7 +171,16 @@ input:focus-visible, textarea:focus-visible, select:focus-visible {
     color: var(--color-primary);
     letter-spacing: -0.5px;
 }
-.site-logo { max-width: 180px; /* Ajustar tamaño del logo */ height: auto; object-fit: contain; }
+/* --- HEADER --- */
+/* ... otros estilos del header ... */
+
+.site-logo {
+    display: block; /* Buena práctica para imágenes dentro de enlaces */
+    max-width: 300px; /* Tamaño MÁXIMO deseado en pantallas grandes. AJUSTA si es necesario (ej. 160px, 200px) */
+    height: auto;     /* CRUCIAL: Mantiene la proporción correcta al escalar */
+}
+
+
 .main-nav ul { display: flex; gap: 2rem; /* Más espacio entre items */ }
 .main-nav a {
     color: var(--color-text-dark);
@@ -205,7 +214,7 @@ input:focus-visible, textarea:focus-visible, select:focus-visible {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
     /* *** TU IMAGEN DE FONDO *** */
-    background: url('../imagen/inicio.jpg') no-repeat center center/cover; /* ¡Verifica esta ruta! */
+    background: url('../images/inicio.jpg') no-repeat center center/cover; /* ¡Verifica esta ruta! */
     /* Opcional: Efecto Ken Burns suave (zoom lento) */
     /* animation: kenburns 30s ease-in-out infinite alternate; */
     z-index: 1;
