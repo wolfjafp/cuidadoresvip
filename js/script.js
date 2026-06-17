@@ -1,5 +1,5 @@
 // Función autoejecutable para encapsular el código
-(function() {
+(function () {
     'use strict';
 
     // --- Variables Constantes ---
@@ -61,8 +61,8 @@
         event.preventDefault(); // Prevenir el envío normal
 
         if (!contactForm || !formFeedback) {
-             console.warn("Formulario de contacto o elemento de feedback no encontrado.");
-             return;
+            console.warn("Formulario de contacto o elemento de feedback no encontrado.");
+            return;
         }
 
         try {
@@ -90,12 +90,12 @@
                 firstInvalidField = contactForm.querySelector(':invalid');
                 if (firstInvalidField) {
                     // Scroll suave hacia el campo inválido si es posible
-                     try {
+                    try {
                         firstInvalidField.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                     } catch(e) {
-                         // Si falla el scroll, solo enfocar
+                    } catch (e) {
+                        // Si falla el scroll, solo enfocar
                         firstInvalidField.focus();
-                     }
+                    }
                 }
                 return;
             }
@@ -132,10 +132,10 @@ ${message}`;
             const cleanPhoneNumber = WHATSAPP_NUMBER.replace(/[^0-9]/g, ''); // Limpiar el número destino
 
             if (!cleanPhoneNumber) {
-                 console.error("Número de WhatsApp destino no válido:", WHATSAPP_NUMBER);
-                 formFeedback.textContent = 'Error configurando el enlace de contacto. Avísanos por favor.';
-                 formFeedback.classList.add('error');
-                 return;
+                console.error("Número de WhatsApp destino no válido:", WHATSAPP_NUMBER);
+                formFeedback.textContent = 'Error configurando el enlace de contacto. Avísanos por favor.';
+                formFeedback.classList.add('error');
+                return;
             }
 
             const whatsappURL = `https://wa.me/${cleanPhoneNumber}?text=${encodedMessage}`;
@@ -146,30 +146,30 @@ ${message}`;
             // Abrir WhatsApp en nueva pestaña/app
             const whatsappWindow = window.open(whatsappURL, '_blank', 'noopener,noreferrer');
 
-             // Si falla la apertura (pop-up bloqueado), informar al usuario
-             if (!whatsappWindow || whatsappWindow.closed || typeof whatsappWindow.closed == 'undefined') {
+            // Si falla la apertura (pop-up bloqueado), informar al usuario
+            if (!whatsappWindow || whatsappWindow.closed || typeof whatsappWindow.closed == 'undefined') {
                 // Dar un pequeño margen por si tarda en abrir
                 setTimeout(() => {
                     // Volver a chequear si realmente no se abrió
                     if (!whatsappWindow || whatsappWindow.closed || typeof whatsappWindow.closed == 'undefined') {
-                         formFeedback.textContent = 'Parece que tu navegador bloqueó la ventana de WhatsApp. ¡Intenta de nuevo o contáctanos directamente!';
-                         formFeedback.classList.remove('success');
-                         formFeedback.classList.add('error');
+                        formFeedback.textContent = 'Parece que tu navegador bloqueó la ventana de WhatsApp. ¡Intenta de nuevo o contáctanos directamente!';
+                        formFeedback.classList.remove('success');
+                        formFeedback.classList.add('error');
                     }
                 }, 1000); // Esperar 1 segundo
             }
 
 
-             // Opcional: Resetear formulario después de un breve tiempo
-             /*
-             setTimeout(() => {
-                 if (contactForm) { contactForm.reset(); }
-                 if (formFeedback) {
-                    formFeedback.textContent = '';
-                    formFeedback.className = 'form-feedback';
-                 }
-             }, 4000); // Resetear después de 4 segundos
-             */
+            // Opcional: Resetear formulario después de un breve tiempo
+            /*
+            setTimeout(() => {
+                if (contactForm) { contactForm.reset(); }
+                if (formFeedback) {
+                   formFeedback.textContent = '';
+                   formFeedback.className = 'form-feedback';
+                }
+            }, 4000); // Resetear después de 4 segundos
+            */
 
 
         } catch (error) {
@@ -197,14 +197,14 @@ ${message}`;
 
         // Hacer scroll suave hasta la sección de contacto
         if (contactSection) {
-             // Pequeño retraso para asegurar que el valor se establezca antes del scroll
+            // Pequeño retraso para asegurar que el valor se establezca antes del scroll
             setTimeout(() => {
-                 contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                 // Opcional: Enfocar el primer campo del formulario después del scroll
-                 const firstInput = contactForm.querySelector('input:not([type="hidden"]), select, textarea');
-                 if (firstInput) {
+                contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                // Opcional: Enfocar el primer campo del formulario después del scroll
+                const firstInput = contactForm.querySelector('input:not([type="hidden"]), select, textarea');
+                if (firstInput) {
                     // firstInput.focus(); // Puede ser molesto a veces, probar si gusta
-                 }
+                }
             }, 100);
         } else {
             console.warn("Sección de contacto no encontrada para hacer scroll.");
@@ -214,6 +214,16 @@ ${message}`;
     // --- Inicialización y Event Listeners ---
 
     document.addEventListener('DOMContentLoaded', () => {
+        // --- Activar Estado Pausado (Respetando SEO y bloqueando WhatsApp/scroll) ---
+        document.body.classList.add('paused-state');
+        
+        // Desactivar interacción y foco de teclado en el contenido de fondo
+        const backgroundElements = document.querySelectorAll('.site-header, #main-content, .site-footer, .whatsapp-float');
+        backgroundElements.forEach(el => {
+            el.setAttribute('inert', '');
+            el.style.pointerEvents = 'none'; // Bloquear clics del mouse
+        });
+
         updateFooterYear(); // Actualizar año en footer
 
         // Manejo del menú móvil
@@ -224,20 +234,20 @@ ${message}`;
                 mainNav.classList.remove('active');
                 mobileMenuToggle.setAttribute('aria-expanded', 'false');
                 const icon = mobileMenuToggle.querySelector('i');
-                 if(icon){
+                if (icon) {
                     icon.classList.remove('fa-times');
                     icon.classList.add('fa-bars');
-                 }
+                }
             }
         } else {
-             console.warn("Elementos del menú móvil (toggle o nav) no encontrados.");
+            console.warn("Elementos del menú móvil (toggle o nav) no encontrados.");
         }
 
         // Manejo del formulario de contacto
         if (contactForm) {
             contactForm.addEventListener('submit', handleContactFormSubmit);
         } else {
-             console.warn("Formulario de contacto no encontrado.");
+            console.warn("Formulario de contacto no encontrado.");
         }
 
         // Añadir listener a los botones de planes
@@ -247,7 +257,128 @@ ${message}`;
             console.warn("Formulario de contacto no encontrado, no se pudo añadir listeners a botones de plan.");
         }
 
-        console.log("CUIDADORESVIP.CL script inicializado (v. con correcciones).");
+        // === NUEVAS FUNCIONALIDADES ===
+
+        // Carrusel de Testimonios
+        const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+        const carouselDots = document.querySelectorAll('.carousel-dot');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            testimonialSlides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            carouselDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        if (carouselDots.length > 0) {
+            carouselDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = index;
+                    showSlide(currentSlide);
+                });
+            });
+
+            // Auto-avance del carrusel cada 5 segundos
+            setInterval(() => {
+                currentSlide = (currentSlide + 1) % testimonialSlides.length;
+                showSlide(currentSlide);
+            }, 5000);
+        }
+
+        // FAQ Acordeón
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const isActive = question.classList.contains('active');
+
+                // Cerrar todas las preguntas
+                faqQuestions.forEach(q => {
+                    q.classList.remove('active');
+                    q.setAttribute('aria-expanded', 'false');
+                    q.nextElementSibling.classList.remove('active');
+                });
+
+                // Abrir la pregunta clickeada si no estaba activa
+                if (!isActive) {
+                    question.classList.add('active');
+                    question.setAttribute('aria-expanded', 'true');
+                    question.nextElementSibling.classList.add('active');
+                }
+            });
+        });
+
+        // Contador Animado de Estadísticas
+        const statNumbers = document.querySelectorAll('.stat-number');
+        let statsAnimated = false;
+
+        function animateStats() {
+            if (statsAnimated) return;
+
+            statNumbers.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-target'));
+                const duration = 2000; // 2 segundos
+                const increment = target / (duration / 16); // 60 FPS
+                let current = 0;
+
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        stat.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        stat.textContent = target;
+                    }
+                };
+
+                updateCounter();
+            });
+
+            statsAnimated = true;
+        }
+
+        // Intersection Observer para animar estadísticas cuando sean visibles
+        const statsSection = document.getElementById('stats');
+        if (statsSection) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateStats();
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observer.observe(statsSection);
+        }
+
+        // Cerrar menú móvil al hacer clic fuera
+        document.addEventListener('click', (event) => {
+            if (mainNav && mainNav.classList.contains('active')) {
+                const isClickInsideNav = mainNav.contains(event.target);
+                const isClickOnToggle = mobileMenuToggle && mobileMenuToggle.contains(event.target);
+
+                if (!isClickInsideNav && !isClickOnToggle) {
+                    toggleMobileMenu();
+                }
+            }
+        });
+
+        // Cerrar menú móvil al hacer clic en un enlace
+        if (mainNav) {
+            const navLinks = mainNav.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mainNav.classList.contains('active')) {
+                        toggleMobileMenu();
+                    }
+                });
+            });
+        }
+
+        console.log("CUIDADORESVIP.CL script inicializado con nuevas funcionalidades.");
     });
 
 })(); // Fin de la función autoejecutable
